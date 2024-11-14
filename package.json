@@ -1,0 +1,26 @@
+{
+  "name": "prayrequest",
+  "version": "0.0.1",
+  "description": "Pray Request Telegram Bot",
+  "main": "dist/app.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "nodemon dist/app.js",
+    "start": "node dist/app.js",
+    "watch": "tsc -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "nodemon": "^3.1.7",
+    "tslint": "^5.20.1",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mongodb": "^6.10.0",
+    "telegraf": "^4.16.3",
+    "typegram": "^5.2.0"
+  }
+}
