@@ -1,6 +1,7 @@
 import { Markup, Telegraf } from "telegraf";
 import 'dotenv/config';
 import { addDataToTable, dataType, sendMessage } from "./mongodb";
+import http from 'http';
 
 const bot = new Telegraf(
   process.env.BOT_TOKEN as string
@@ -28,5 +29,15 @@ bot.on("text", async (ctx) => {
     ctx.reply("Thanks for submiting your prey request wait to get your prey request published on our channel join us @preyrequest")
   }
 });
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello World\n');
+});
+
+server.listen(8080, () => {
+  console.log('Server running on port 8080');
+});
+
 
 bot.launch();
