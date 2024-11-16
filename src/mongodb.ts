@@ -1,7 +1,8 @@
 import { Telegraf } from "telegraf";
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://thoughts:thoughts@schooladwa.b4hrxye.mongodb.net/?retryWrites=true&w=majority&appName=SchoolAdwa";
+
+const uri = process.env.BOT_TOKEN as string;
 
 export type dataType = {
     _id?: string,
